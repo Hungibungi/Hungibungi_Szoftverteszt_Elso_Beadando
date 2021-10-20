@@ -9,6 +9,9 @@ function hello(names) {
         return "Hello, " + names[0] + ".";
     }
     if(names.length == 2){
+        if(names[0].toUpperCase() == names[0] && names[1].toUpperCase() == names[1]){
+            return "HELLO " + names[0] + " AND " + names[1] + "!";
+        }
         return "Hello, " + names[0] + " and " + names[1] + ".";
     }
     if(names.length > 2){
