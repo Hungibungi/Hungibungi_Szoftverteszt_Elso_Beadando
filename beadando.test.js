@@ -1,9 +1,11 @@
 const hello = require('./beadando');
 
 test('no imput', () => {
-    expect(hello("")).toBe('Hello, my friend.');
+    const nevek = [];
+    expect(hello(nevek)).toBe('Hello, my friend.');
 });
 
 test('one name', () => {
-    expect(hello("Stella")).toBe('Hello, Stella.');
+    const nevek = ["Stella"];
+    expect(hello(nevek)).toBe('Hello, Stella.');
 });
