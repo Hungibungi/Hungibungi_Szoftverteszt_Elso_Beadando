@@ -18,6 +18,9 @@ function hello(names) {
         return "Hello, " + names[0] + " and " + names[1] + ".";
     }
     if(names.length > 2){
+        if(mixed(names)[0] == true){
+            return hello(mixed(names)[1]) + " AND " + hello(mixed(names)[2]);
+        }
         if(shout(names) == true){
             var returnee = "HELLO ";
             for(i=0;i<names.length-2;i++){
