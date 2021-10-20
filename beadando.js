@@ -1,5 +1,5 @@
 function hello(rawnames) {
-    names = split(rawnames);
+    var names = split(rawnames);
 
     if(names.length == 0){
         return "Hello, my friend.";
@@ -61,6 +61,7 @@ function mixed(names) {
     if(lowercase.length == 0 || uppercase.length == 0){
         return [false];
     }
+
     return [true, lowercase, uppercase];
 
 }
