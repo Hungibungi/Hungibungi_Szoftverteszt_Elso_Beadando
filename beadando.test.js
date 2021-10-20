@@ -44,3 +44,8 @@ test('mixed more than 2 names', () => {
     const nevek = ["STELLA", "George", "Iris", "LILLY", "Jin", "HARU"];
     expect(hello(nevek)).toBe('Hello, George, Iris and Jin. AND HELLO STELLA, LILLY AND HARU!');
 });
+
+test('split two names', () => {
+    const nevek = ["Stella, George"];
+    expect(hello(nevek)).toBe('Hello, Stella and George.');
+});
