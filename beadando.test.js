@@ -9,3 +9,8 @@ test('one name', () => {
     const nevek = ["Stella"];
     expect(hello(nevek)).toBe('Hello, Stella.');
 });
+
+test('two names', () => {
+    const nevek = ["Stella", "George"];
+    expect(hello(nevek)).toBe('Hello, Stella and George.');
+});
