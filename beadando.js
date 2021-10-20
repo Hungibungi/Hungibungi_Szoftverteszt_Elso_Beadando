@@ -3,6 +3,10 @@ function hello(names) {
         return "Hello, my friend.";
     }
     if(names.length == 1){
+        var shouting = names[0].toUpperCase();
+        if(shouting == names){
+            return "HELLO " + names + "!";
+        }
         return "Hello, " + names[0] + ".";
     }
     if(names.length == 2){
