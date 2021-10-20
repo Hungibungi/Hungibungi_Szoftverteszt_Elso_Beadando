@@ -29,3 +29,8 @@ test('shouting two names', () => {
     const nevek = ["STELLA", "GEORGE"];
     expect(hello(nevek)).toBe('HELLO STELLA AND GEORGE!');
 });
+
+test('shouting more than 2 names', () => {
+    const nevek = ["STELLA", "GEORGE", "LILLY", "JIN"];
+    expect(hello(nevek)).toBe('HELLO STELLA, GEORGE, LILLY AND JIN!');
+});
