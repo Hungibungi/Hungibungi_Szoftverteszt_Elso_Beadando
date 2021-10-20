@@ -69,23 +69,24 @@ function mixed(names) {
 function split(rawnames) {
     var temp = [];
     var names = [];
+    var expand = 0;
+    var index = 0;
+
     for(i=0;i<rawnames.length;i++){
-        names[i] = rawnames[i];
-    }
-    for(i=0;i<rawnames.length;i++){
-        if(rawnames[i].includes(", ")){
-            temp = rawnames[i].split(", ");
-            for(y=0;y<temp.length;y++){
-                for(z=rawnames.length;z>i+y;z--){
-                    names[z+temp.length-1] = names[z];
-                }
-                names[i+y] = temp[y];
-            }
+        if(rawnames[i].match(/, /g) == null){
+            return rawnames;
         }
     }
 
-    if(names[names.length-1] == undefined){
-        names = names.splice(0,names.length-1);
+    for(i=0;i<rawnames.length;i++){
+        if(rawnames[i].includes(', ')){
+            expand = rawnames[i].match(/, /g).length + 1;
+            temp = rawnames[i].split(', ');
+            for(y=0;y<expand;y++){
+                names[index] = temp[y];
+                index++;
+            }
+        }
     }
 
     return names;
