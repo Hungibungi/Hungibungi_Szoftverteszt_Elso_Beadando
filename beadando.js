@@ -14,8 +14,7 @@ function hello(names) {
             returnee = returnee.concat(names[i] + ", ");
         }
         returnee = returnee.concat(names[names.length-2] + " and ");
-        returnee = returnee.concat(names[names.length-1] + ".");
-        return returnee;
+        return returnee.concat(names[names.length-1] + ".");
     }
 }
 
