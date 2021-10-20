@@ -71,12 +71,18 @@ function split(rawnames) {
     var names = [];
     var expand = 0;
     var index = 0;
+    var returnindex = 0;
 
     for(i=0;i<rawnames.length;i++){
         if(rawnames[i].match(/, /g) == null){
-            return rawnames;
+            returnindex++;
+            if(returnindex == rawnames.length){
+                return rawnames;
+            }
         }
     }
+
+    console.log(rawnames.length);
 
     for(i=0;i<rawnames.length;i++){
         if(rawnames[i].includes(', ')){
@@ -87,8 +93,11 @@ function split(rawnames) {
                 index++;
             }
         }
+        else{
+            names[index] = rawnames[i];
+            index++;
+        }
     }
-
     return names;
 }
 
